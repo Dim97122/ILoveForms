@@ -6,7 +6,7 @@ class UserController < ApplicationController
   def create
     @user= User.new
     @user.username= params[:username]
-    @user.mail= params[:email]
+    @user.email= params[:email]
     @user.bio= params[:bio]
     @user.save
     puts "User créé!"
