@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+#=============================STATICS===========================
+  get   '/', to: 'static_pages#home'
+#==============================USERS============================
+  get   '/new_user',  to: 'user#new'
+  post  '/new_user',  to: 'user#create'
 end

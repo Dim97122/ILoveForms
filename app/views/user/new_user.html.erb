@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Nouvel utilisateur</title>
+  </head>
+  <body>
+    <h1>Bienvenue dans la création d'utilisateurs</h1>
+    <p>Fais péter le formulaire biche!!!</p>
+    <form  action="new_user.html" method="post">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      <input type="text" name="username" >
+      <input type="text" name="email" >
+      <input type="text" name="bio" >
+      <input type="submit" value="Valider">
+    </form>
+
+<!--
+     <%= form_tag url_for(action: 'new_user.html'), method: "post" do %>
+
+      <%= label_tag 'Title' %>
+      <%= text_field_tag 'title', @post.title %>
+      <br /> <br />
+
+      <%= label_tag 'Body' %>
+      <%= text_area_tag 'body', @post.body %>
+      <br /> <br />
+
+      <%= label_tag 'Author' %>
+      <%= text_field_tag 'author', @post.author %>
+      <br /> <br />
+
+      <%= submit_tag "Create Post" %>
+
+    <% end %>
+-->    
+  </body>
+</html>
