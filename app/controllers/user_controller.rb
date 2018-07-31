@@ -11,7 +11,11 @@ class UserController < ApplicationController
     @user.bio= params["user"][:bio]
     @user.save
     puts "User créé!"
-    redirect_to "/new_user"
+    if user.id != nil
+      redirect_to "/html_success"
+    else
+      redirect_to "/error"
+    end
   end
 =end
 #==============================FORM_TAG_METHOD=============================
@@ -23,7 +27,11 @@ class UserController < ApplicationController
      @user.bio= params[:bio]
      @user.save
      puts "User créé!"
-     redirect_to "/new_user"
+     if user.id != nil
+       redirect_to "/html_success"
+     else
+       redirect_to "/error"
+     end
    end
 =end
 #==============================FORM_HTML_METHOD=============================
@@ -34,7 +42,12 @@ class UserController < ApplicationController
       @user_bio= params["bio"]
       user = User.create(username: @user_name, email: @user_email, bio: @user_bio)
       puts "User créé!"
-      redirect_to "/new_user"
+      if user.id != nil
+        redirect_to "/html_success"
+      else
+        redirect_to "/error"
+      end
+
   end
 
 
