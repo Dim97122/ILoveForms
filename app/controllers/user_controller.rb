@@ -9,7 +9,6 @@ class UserController < ApplicationController
     @user_bio= params["bio"]
     user = User.create(username: @user_name, mail: @user_mail, bio: @user_bio)
     puts "User créé!"
-    redirect_to "/new_user
-
+    redirect_to "/new_user"
   end
 end
