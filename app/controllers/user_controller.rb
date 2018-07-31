@@ -4,11 +4,11 @@ class UserController < ApplicationController
   end
 
   def create
-    User.new
-    @user_name= params[:username]
-    @user_mail= params[:email]
-    @user_bio= params[:bio]
-    User.save
+    @user= User.new
+    @user.username= params[:username]
+    @user.mail= params[:email]
+    @user.bio= params[:bio]
+    @user.save
     puts "User créé!"
     redirect_to "/new_user"
   end
