@@ -4,7 +4,11 @@ Wesh, la moitié des BoyzIICode (@Dimitri Kiavu & @Pierre Tâm-Anh) est de retou
 
 ## Tu veux voir à quoi ça ressemble ?
 
-Et bien c'est très simple, il te suffit de:
+Clique par ici >> https://iloveforms.herokuapp.com/
+
+## Ton navigateur web te fout la zézer ?
+
+Et bien ce n'est pas grave, il te suffit de:
 
 1) Cloner le repo ```git clone https://github.com/Dim97122/ILoveForms.git```
 2) Se mettre dans le dossier cloné puis ```bundle install --without production``` 
