@@ -8,9 +8,12 @@
     <p>Fais péter le formulaire biche!!!</p>
     <form  action="new_user.html" method="post">
       <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-      <input type="text" name="username" >
+      Username:<br>
+      <input type="text" name="username" ><br>
+      Mail:<br>
       <input type="text" name="email" >
-      <input type="text" name="bio" >
+      Ya life:<br>
+      <textarea type="text" name="bio" ></textarea>
       <input type="submit" value="Valider">
     </form>
   </body>
