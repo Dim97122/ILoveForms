@@ -7,39 +7,57 @@
   <body>
     <h1>Bienvenue dans la création d'utilisateurs</h1>
     <p>Fais péter le formulaire biche!!!</p>
-    <form  action="new_user.html" method="post">
-      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-      Username:<br>
-      <input type="text" name="username" ><br>
-      Mail:<br>
-      <input type="text" name="email" ><br>
-      Ya life:<br>
-      <textarea type="text" name="bio" ></textarea><br>
-      <input type="submit" value="Valider">
-    </form>
 
-    <br /> <br />
+    <h3>Formulaire HTML</h3>
+      <form  action="new_user.html" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        Username:<br>
+        <input type="text" name="username" ><br>
+        Mail:<br>
+        <input type="text" name="email" ><br>
+        Ya life:<br>
+        <textarea type="text" name="bio" ></textarea><br>
+        <input type="submit" value="Valider">
+      </form>
 
-    <%= form_tag url_for(action: 'create'), method: "user" do %>
-
-      <%#= hidden_field_tag  'authenticity_token', 'form_authenticity_token' %>
       <br /> <br />
 
-      <%= label_tag 'Username' %>
-      <%= text_field_tag 'username' %>
+    <h3>Formulaire form_tag</h3>
+        <br />
+      <%= form_tag url_for(action: 'create'), method: "user" do %>
+
       <br /> <br />
 
-      <%= label_tag 'Email' %>
-      <%= email_field_tag 'email' %>
+        <%= label_tag 'Username' %>
+        <%= text_field_tag 'username' %>
+        <br /> <br />
+
+        <%= label_tag 'Email' %>
+        <%= email_field_tag 'email' %>
+        <br /> <br />
+
+        <%= label_tag 'Bio' %>
+        <%= text_area_tag 'bio' %>
+        <br /> <br />
+
+        <%= submit_tag "Valider" %>
+
+      <% end %>
+
       <br /> <br />
 
-      <%= label_tag 'Bio' %>
-      <%= text_area_tag 'bio' %>
-      <br /> <br />
+    <h3>Formulaire Form_for</h3>
+          <br />
+        <%= form_for @user, url: {action: "create_form_for"}, html: {class: "nifty_form"} do |f| %>
+        <%= f.text_field :username %>
+        <%= f.email_field :email %>
+        <%= f.text_area :bio %>
+        <%= f.submit "Valider" %>
+      <% end %>
 
-      <%= submit_tag "Valider" %>
 
-    <% end %>
+
+
 
   </body>
 </html>

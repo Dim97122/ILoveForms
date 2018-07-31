@@ -12,4 +12,8 @@ class UserController < ApplicationController
     puts "User créé!"
     redirect_to "/new_user"
   end
+
+  def create_form_for
+    @user= User.new    
+  end
 end
